@@ -1,0 +1,45 @@
+CREATE TABLE students1(
+student_id serial PRIMARY KEY,
+first_name VARCHAR(45) NOT NULL,
+last_name VARCHAR(45) NOT NULL, 
+homeroom_number INTEGER CHECK(homeroom_number > 0),
+phone VARCHAR(20) UNIQUE NOT NULL,
+email VARCHAR(115) UNIQUE,
+grad_year integer);
+
+/* first table*/
+
+
+CREATE TABLE teachers(
+	teacher_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	homeroom_number INTEGER CHECK(homeroom_number > 0),
+	department VARCHAR(50) NOT NULL,
+	phone VARCHAR(20) UNIQUE NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL;
+  
+  /*second table*/
+  
+  /*then, we start to evaluate the tables*/
+  
+  INSERT INTO students1(
+	first_name,
+	last_name,
+	homeroom_number,
+	phone
+)
+VALUES
+('Mark','Watney',5,'7775551234')
+
+/**/
+
+INSERT INTO teachers(
+	first_name,
+	last_name,
+	homeroom_number,
+	department,
+	phone,
+	email
+)
+VALUES('Jonas','Salk',5,'Biology','7775554321','jsalk@mail.com')
